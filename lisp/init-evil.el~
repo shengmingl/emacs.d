@@ -1,6 +1,0 @@
-(when (maybe-require-package 'evil)
-  (after-load 'evil
-    ;;(diminish 'undo-tree)
-    (add-hook 'after-init-hook 'evil-mode)))
-
-(provide 'init-evil)

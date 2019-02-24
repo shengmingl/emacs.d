@@ -2,7 +2,5 @@
 !.gitignore
 !init.el
 !custom.el
-!/site-lisp/
-!/site-lisp/**
 !/lisp/
-!/lisp/**
+!/lisp/*.el
