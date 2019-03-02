@@ -55,6 +55,7 @@
 (require 'init-company)
 (require 'init-yasnippet)
 
+(require 'init-cc)
 (require 'init-go)
 (require 'init-python)
 
