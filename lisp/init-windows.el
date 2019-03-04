@@ -21,7 +21,6 @@
   (setq display-line-numbers-width 3)
   (add-hook 'prog-mode-hook 'display-line-numbers-mode))
 
-
 ;; Make "C-x o" prompt for a target window when there are more than 2
 (require-package 'switch-window)
 (setq-default switch-window-shortcut-style 'alphabet)

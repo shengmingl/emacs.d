@@ -11,16 +11,16 @@
 (when (maybe-require-package 'company)
   (add-hook 'after-init-hook 'global-company-mode)
   (after-load 'company
-    (dolist (backend '(company-eclim company-semantic))
+    (dolist (backend '(company-eclim company-semantic company-clang))
       (delq backend company-backends))
     (diminish 'company-mode)
-    (define-key company-mode-map (kbd "M-/") 'company-complete)
+    (define-key company-mode-map (kbd "M-/") 'company-complete-common-or-cycle)
     (define-key company-active-map (kbd "M-/") 'company-other-backend)
     (define-key company-active-map (kbd "C-n") 'company-select-next)
     (define-key company-active-map (kbd "C-p") 'company-select-previous)
+    (setq company-idle-delay 0)
     (setq-default company-dabbrev-other-buffers 'all
                   company-tooltip-align-annotations t))
-  (global-set-key (kbd "M-C-/") 'company-complete)
   (when (maybe-require-package 'company-quickhelp)
     (add-hook 'after-init-hook 'company-quickhelp-mode)))
 
