@@ -15,7 +15,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (add-hook 'after-init-hook 'winner-mode)
-(add-hook 'after-init-hook 'ido-mode)
+;(add-hook 'after-init-hook 'ido-mode)
 
 (when (fboundp 'display-line-numbers-mode)
   (setq display-line-numbers-width 3)

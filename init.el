@@ -50,7 +50,9 @@
 
 (require 'init-themes)
 (require 'init-smex)
+(require 'init-ivy)
 (require 'init-windows)
+(require 'init-xterm)
 (require 'init-projectile)
 (require 'init-evil)
 (require 'init-company)

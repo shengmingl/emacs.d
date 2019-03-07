@@ -7,7 +7,11 @@
   (add-hook 'c-mode-common-hook
 	    (lambda ()
 	      (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
-		(ggtags-mode 1)))))
+		(ggtags-mode 1))))
+  (after-load 'evil
+    (after-load 'ggtags
+      (evil-define-key 'normal global (kbd "C-]") 'ggtags-find-tag-dwim)
+      (evil-define-key 'normal global (kbd "M-]") 'ggtags-find-other-symbol))))
 
 ;; (when (maybe-require-package 'counsel-gtags)
 ;;   (add-hook 'c-mode-hook 'counsel-gtags-mode)
